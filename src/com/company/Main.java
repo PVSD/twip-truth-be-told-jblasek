@@ -7,7 +7,6 @@ import javax.script.ScriptEngineManager;
 public class Main {
 
     public static Boolean stringToBoolean(String expression) throws java.lang.Exception {
-
         ScriptEngineManager mgr = new ScriptEngineManager();
         ScriptEngine engine = mgr.getEngineByName("JavaScript");
 
@@ -15,13 +14,10 @@ public class Main {
 
         return dPenne;
     }
-    
-    public static void main(String[] args) throws IOException, java.lang.InterruptedException, java.lang.Exception {
 
+    public static void main(String[] args) throws IOException, java.lang.InterruptedException, java.lang.Exception {
         File tableSheet = new File("TruthTableSheet.txt");
         tableSheet.createNewFile();
-
-        FileReader tsReader = new FileReader(tableSheet);
         FileWriter tsWriter = new FileWriter(tableSheet);
 
         char array[] = new char[10000];
